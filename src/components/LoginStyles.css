@@ -1,0 +1,135 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw; /* Largura total da viewport */
+  height: 100vh; /* Altura total da viewport */
+  flex-direction: column;
+}
+
+.login-container div {
+  padding: 20px;
+  font-size: large;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.blue-background {
+  background-color: #0A529E;
+}
+
+.login-box {
+  background-color: #0A529E;
+  padding: 20px;
+  border-radius: 5px;
+  width: 90%; /* Adapta a largura para telas menores */
+  max-width: 300px; /* Define um limite de largura */
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  border: #ffffff solid 2px;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+}
+
+.login-button {
+  background-color: #F79532;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #e67e00;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.input-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 1px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.input-icon {
+  color: #666;
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.input-field {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 1rem;
+}
+
+/* Consultas de mídia para responsividade */
+
+/* Telas menores que 768px */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 10px;
+  }
+
+  .login-box {
+      padding: 15px;
+      width: 100%;
+  }
+
+  .input-field {
+      padding: 8px;
+      font-size: 0.9rem;
+  }
+
+  .login-button {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+  }
+
+  .input-icon {
+      font-size: 1.3rem;
+  }
+}
+
+/* Telas menores que 480px */
+@media (max-width: 480px) {
+  .login-box {
+      padding: 10px;
+      border-radius: 3px;
+  }
+
+  .input-field {
+      padding: 6px;
+      font-size: 0.8rem;
+  }
+
+  .login-button {
+      padding: 6px 12px;
+      font-size: 0.8rem;
+  }
+
+  .input-icon {
+      font-size: 1.2rem;
+  }
+}

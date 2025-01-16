@@ -1,0 +1,217 @@
+/* Estilo principal */
+
+  
+  /* Cartão do processo */
+  .process-card {
+    background-color: #F9F9F9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .process-card .header-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom : 4px solid #0A529E;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    
+    
+  }
+  
+  .process-card .header-row span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2d2d2d;
+    justify-content: center;
+  }
+  
+  /* Linha de progresso */
+  .timeline {
+    position: relative;
+    
+    
+  }
+  
+
+
+ 
+  
+  /* Linha de tempo */
+  .timeline {
+    margin-top: 20px;
+  }
+  
+  .timeline-item {
+    margin-bottom: 16px;
+  }
+  
+  .timeline-item .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  
+  
+/* Contêiner principal da barra vertical e das etapas */
+.vertical-progress-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    
+  }
+
+  .container{
+    display: flex;
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    flex-direction: column;
+    justify-content: start;
+    
+  }
+  
+  /* Barra de progresso vertical */
+  .progress-bar-vertical {
+    width: 6px;
+    height: 325px;
+    margin-top: 20px;
+    background-color: #ACAFB1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 14px; /* Centraliza a barra por trás das bolas */
+    z-index: 0; /* Garante que a barra fique atrás das bolas */
+  }
+  
+ /* Preenchimento da barra de progresso */
+.progress-bar-fill {
+    background-color: #0A529E; /* Cor da barra de progresso concluída */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 0; /* Garante que fique atrás das bolas */
+    border-radius: 5px;
+    height: 0; /* Começa sem preenchimento */
+    transition: height 1.5s ease-in-out; /* Animação suave */
+  }
+  
+  /* Classe para iniciar a animação */
+  .progress-bar-fill.animate {
+    height: var(--progress-altura, 100%);
+  }
+  
+  
+  /* Círculos de progresso */
+  .timeline-circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #fff; /* Cor de fundo branca */
+    border: 5px solid #F79532; /* Cor laranja para as bolas */
+    position: relative;
+    z-index: 1; /* Garante que as bolas fiquem na frente da barra */
+  }
+  
+  /* Círculo de etapa concluída */
+  
+  /* Alinhamento das etapas */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 32px;
+    position: relative;
+    z-index: 1; /* Garante que os conteúdos fiquem à frente */
+  }
+  
+  .timeline-item {
+    display: flex;
+    
+    gap: 16px;
+    position: relative;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    gap: 4px;
+    max-width: 200px;
+    font-size: 14px;
+    align-items: flex-end; /* Alinha o conteúdo à direita */
+  }
+  
+
+ 
+
+  /* Status pendente */
+.status-pendente {
+    color: #f44336;
+    font-weight: bold;
+  }
+  
+  .circle-pendente {
+    border: 5px solid #f44336;
+  }
+  
+  /* Status concluído */
+  .status-concluido {
+    color: #4caf50;
+    font-weight: bold;
+  }
+  
+  .circle-concluido {
+    background-color: #4caf50;
+    border: 5px solid #4caf50;
+  }
+  
+  /* Status em andamento */
+  .status-em-andamento {
+    color: #2196f3;
+    font-weight: bold;
+  }
+  
+  .circle-em-andamento {
+    background-color: #2196f3;
+    border: 5px solid #2196f3;
+  }
+  
+  /* Status aguardando aprovação */
+  .status-aguardando-aprovacao {
+    color: #ff9800;
+    font-weight: bold;
+  }
+  
+  .circle-aguardando-aprovacao {
+    background-color: #ff9800;
+    border: 5px solid #ff9800;
+  }
+  
+ 
+ 
+  .header{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    background-color: #0A529E;
+    color: white;
+    border-bottom: #F79532 solid 7px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.5);
+    margin: 0 ;
+  }
+
+  .user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
