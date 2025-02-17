@@ -69,12 +69,18 @@
     
   }
 
+  .card{
+    padding: 20px;
+    
+  }
+
   .container{
     display: flex;
     width: 100vw; /* Largura total da viewport */
     height: 100vh; /* Altura total da viewport */
     flex-direction: column;
     justify-content: start;
+    
     
   }
   
@@ -215,3 +221,21 @@
     flex-direction: column;
   }
   
+  
+
+  .process-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.process-preview-card {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+}

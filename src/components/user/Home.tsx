@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import axios from "axios";
 import "./Home.css"; // Importa o CSS atualizado
 import { useNavigate } from "react-router-dom";
@@ -33,7 +33,7 @@ function Home() {
   const [erro, setErro] = useState<string | null>(null);
   const token = localStorage.getItem("token");
   const navigate = useNavigate(); // Hook de navegação
-  useEffect(() => {
+  useMemo(() => {
     const fetchUsuarioEProcessos = async () => {
       if (!token) {
         setErro("Token de autenticação não encontrado.");
@@ -76,7 +76,12 @@ function Home() {
         <p>Carregando informações dos processos...</p>
       ) : (
         processos.map((processo) => (
+          
+          <div className="card">
           <ProcessoInfo key={processo.id} processo={processo} />
+          </div>
+
+          
         ))
       )}
     </div>
@@ -105,7 +110,7 @@ function ProcessoInfo({ processo }: { processo: Processo }) {
   
     const [animacaoIniciada, setAnimacaoIniciada] = useState(false);
   
-    useEffect(() => {
+    useMemo(() => {
       const timer = setTimeout(() => {
         setAnimacaoIniciada(true);
       }, 100); // Tempo para iniciar a animação após o carregamento
