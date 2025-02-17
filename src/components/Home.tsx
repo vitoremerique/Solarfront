@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Home.css"; // Importa o CSS atualizado
+import { useNavigate } from "react-router-dom";
 
 export interface Processo {
   id: number;
@@ -31,7 +32,7 @@ function Home() {
   const [processos, setProcessos] = useState<Processo[]>([]);
   const [erro, setErro] = useState<string | null>(null);
   const token = localStorage.getItem("token");
-
+  const navigate = useNavigate(); // Hook de navegação
   useEffect(() => {
     const fetchUsuarioEProcessos = async () => {
       if (!token) {
@@ -54,6 +55,7 @@ function Home() {
       } catch (error: any) {
         console.error("Erro ao buscar dados:", error);
         setErro(error.response?.data?.message || "Erro ao carregar os dados.");
+        navigate("/Erro");
       }
     };
 

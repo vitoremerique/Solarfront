@@ -62,8 +62,9 @@ export default function Login() {
   return (
     <body>
       <div className="login-container blue-background">
-        <div>Acompanhe seu projeto aqui</div>
+       
         <div className="login-box">
+        <div>Acompanhe seu projeto aqui</div>
           <div className="logo"></div>
 
           {/* Campo de CPF com ícone */}

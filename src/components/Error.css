@@ -1,0 +1,47 @@
+/* Error.css */
+
+.erro-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+.erro-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+    border: 2px solid #343a40;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.erro-button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.erro-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.erro-button:active {
+    background-color: #003d80;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
